@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">RCPV Business</title>
+  <desc id="desc">Black and gold RCPV Business monogram</desc>
+  <rect width="64" height="64" fill="#070b14"/>
+  <rect x="4" y="4" width="56" height="56" fill="none" stroke="#c9a94e" stroke-width="3"/>
+  <path d="M19 17h9.5c7 0 11.5 3.8 11.5 9.5 0 3.9-2.2 6.8-5.9 8.3L42 47h-7.2l-7-10.6h-2.5V47H19V17Zm6.3 5.7v8.9h3c3.2 0 5.1-1.5 5.1-4.5 0-2.9-1.9-4.4-5.1-4.4h-3Z" fill="#d9bd6c"/>
+  <path d="M19 14h26M19 50h26" stroke="#d9bd6c" stroke-width="1" opacity=".7"/>
+</svg>
