@@ -21,13 +21,13 @@ const areas = [
     href: '#',
   },
   {
-    id: 'creadores',
-    name: 'Creadores',
+    id: 'habitos-salud',
+    name: 'Hábitos y salud',
     description:
-      'Modelos de negocio para creadores y profesionales que convierten su contenido en una actividad empresarial.',
-    label: 'Próximamente',
-    active: false,
-    href: '#',
+      'Seguimiento de hábitos y salud aplicado a emprendedores, para sostener resultados sin quemarte.',
+    label: 'Área Activa',
+    active: true,
+    href: 'https://habitosysalud.rcpvbusiness.com',
   },
 ];
 
@@ -106,7 +106,7 @@ export default function Areas() {
                     href={area.href}
                     className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-gold-200 hover:text-gold-100 transition-colors duration-300 group/btn"
                   >
-                    EXPLORAR TRADING
+                    EXPLORAR {area.name.toUpperCase()}
                     <ArrowRight
                       size={15}
                       className="group-hover/btn:translate-x-1 transition-transform duration-300"
