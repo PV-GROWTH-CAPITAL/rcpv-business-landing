@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react';
+import { Fragment } from 'react';
 
 export default function Hero() {
   return (
@@ -69,7 +70,12 @@ export default function Hero() {
           className="mt-5 text-sm tracking-[0.15em] uppercase text-gold-300/70 reveal is-visible"
           style={{ transitionDelay: '450ms' }}
         >
-          Trading · E-commerce · Creadores
+          {['Trading', 'Desarrollo personal', 'E-commerce', 'Creadores'].map((area, i) => (
+            <Fragment key={area}>
+              {i > 0 && ' · '}
+              <span className="whitespace-nowrap">{area}</span>
+            </Fragment>
+          ))}
         </p>
 
         {/* CTAs */}

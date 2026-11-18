@@ -3,6 +3,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Areas from './components/Areas';
 import TradingEcosystem from './components/TradingEcosystem';
+import DesarrolloEcosystem from './components/DesarrolloEcosystem';
 import Philosophy from './components/Philosophy';
 import AboutCompany from './components/AboutCompany';
 import CTA from './components/CTA';
@@ -17,6 +18,7 @@ export default function App() {
         <About />
         <Areas />
         <TradingEcosystem />
+        <DesarrolloEcosystem />
         <Philosophy />
         <AboutCompany />
         <CTA />

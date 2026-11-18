@@ -2,9 +2,10 @@ import Reveal from './Reveal';
 
 const milestones = [
   { num: '01', label: 'Trading', active: true },
-  { num: '02', label: 'E-commerce', active: false },
-  { num: '03', label: 'Creadores', active: false },
-  { num: '04', label: 'Nuevos proyectos', active: false },
+  { num: '02', label: 'Desarrollo personal', active: true },
+  { num: '03', label: 'E-commerce', active: false },
+  { num: '04', label: 'Creadores', active: false },
+  { num: '05', label: 'Nuevos proyectos', active: false },
 ];
 
 export default function AboutCompany() {
@@ -51,7 +52,7 @@ export default function AboutCompany() {
             {/* Horizontal line */}
             <div className="absolute top-6 left-0 right-0 h-px bg-gradient-to-r from-gold-400/30 via-white/[0.08] to-transparent hidden md:block" />
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-4">
               {milestones.map((m, i) => (
                 <Reveal key={m.num} delay={i * 150} as="div">
                   <div className="relative flex flex-col items-start md:items-center text-center">
@@ -88,7 +89,7 @@ export default function AboutCompany() {
                         m.active ? 'text-gold-300/80' : 'text-slate-600'
                       }`}
                     >
-                      {m.active ? 'En desarrollo' : i === 3 ? 'Futuro' : 'Planificado'}
+                      {m.active ? 'En desarrollo' : i === milestones.length - 1 ? 'Futuro' : 'Planificado'}
                     </span>
                   </div>
                 </Reveal>

@@ -6,10 +6,19 @@ const areas = [
     id: 'trading',
     name: 'Trading',
     description:
-      'Desarrollo, gestión y herramientas alrededor del trading y la operativa en mercados financieros.',
+      'Desarrollo, gestión y herramientas alrededor del trading en mercados financieros.',
     label: 'Área Activa',
     active: true,
     href: '#ecosistema',
+  },
+  {
+    id: 'desarrollo',
+    name: 'Desarrollo personal',
+    description:
+      'Series, reflexiones y procesos reales de desarrollo personal: disciplina, mentalidad y hábitos.',
+    label: 'Área Activa',
+    active: true,
+    href: 'https://desarrollo.rcpvbusiness.com',
   },
   {
     id: 'ecommerce',
@@ -21,13 +30,22 @@ const areas = [
     href: '#',
   },
   {
-    id: 'habitos-salud',
-    name: 'Hábitos y salud',
+    id: 'creadores',
+    name: 'Creadores',
     description:
-      'Seguimiento de hábitos y salud aplicado a emprendedores, para sostener resultados sin quemarte.',
-    label: 'Área Activa',
-    active: true,
-    href: 'https://habitosysalud.rcpvbusiness.com',
+      'Contenido, marca personal y negocios construidos alrededor de una audiencia.',
+    label: 'Próximamente',
+    active: false,
+    href: '#',
+  },
+  {
+    id: 'nuevos-proyectos',
+    name: 'Nuevos proyectos',
+    description:
+      'Nuevas oportunidades digitales que se irán incorporando al ecosistema.',
+    label: 'Próximamente',
+    active: false,
+    href: '#',
   },
 ];
 
@@ -62,9 +80,9 @@ export default function Areas() {
         </div>
 
         {/* Cards */}
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {areas.map((area, i) => (
-            <Reveal key={area.id} delay={i * 150} as="article">
+            <Reveal key={area.id} delay={(i % 3) * 150} as="article">
               <div
                 className={`group relative h-full p-8 lg:p-10 rounded-sm border transition-all duration-500 ${
                   area.active

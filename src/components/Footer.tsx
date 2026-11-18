@@ -1,6 +1,14 @@
 import { Instagram, Youtube } from 'lucide-react';
 
-const columns = [
+interface FooterLink {
+  label: string;
+  href?: string;
+  comingSoon?: boolean;
+}
+
+const DESARROLLO = 'https://desarrollo.rcpvbusiness.com';
+
+const columns: { title: string; links: FooterLink[] }[] = [
   {
     title: 'Empresa',
     links: [
@@ -13,16 +21,27 @@ const columns = [
     title: 'Áreas',
     links: [
       { label: 'Trading', href: '#ecosistema' },
-      { label: 'E-commerce', href: '#' },
-      { label: 'Creadores', href: '#' },
+      { label: 'Desarrollo personal', href: DESARROLLO },
+      { label: 'E-commerce', comingSoon: true },
+      { label: 'Creadores', comingSoon: true },
+      { label: 'Nuevos proyectos', comingSoon: true },
     ],
   },
   {
     title: 'Trading',
     links: [
       { label: 'Bitácora', href: 'https://bitacora.rcpvbusiness.com' },
-      { label: 'Fiscalidad', href: 'https://fiscalidadtrading.rcpvbusiness.com' },
-      { label: 'Mentalidad', href: 'https://mentalidadtrading.rcpvbusiness.com' },
+      { label: 'Fiscalidad', comingSoon: true },
+      { label: 'Mentalidad', comingSoon: true },
+    ],
+  },
+  {
+    title: 'Desarrollo personal',
+    links: [
+      { label: 'Series', href: `${DESARROLLO}/series` },
+      { label: 'Mentalidad', href: `${DESARROLLO}/mentalidad` },
+      { label: 'Mi proceso', href: `${DESARROLLO}/mi-proceso` },
+      { label: 'Reto de hábitos', comingSoon: true },
     ],
   },
 ];
@@ -89,7 +108,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {columns.map((col) => (
               <div key={col.title}>
                 <h4 className="text-xs font-semibold tracking-[0.25em] uppercase text-gold-300/70 mb-5">
@@ -98,12 +117,21 @@ export default function Footer() {
                 <ul className="space-y-3">
                   {col.links.map((link) => (
                     <li key={link.label}>
-                      <a
-                        href={link.href}
-                        className="text-sm text-slate-400 hover:text-gold-200 transition-colors duration-300 font-light"
-                      >
-                        {link.label}
-                      </a>
+                      {link.comingSoon || !link.href ? (
+                        <span className="text-sm text-slate-600 font-light cursor-default">
+                          {link.label}
+                          <span className="block mt-0.5 text-[10px] tracking-[0.15em] uppercase text-slate-700">
+                            Próximamente
+                          </span>
+                        </span>
+                      ) : (
+                        <a
+                          href={link.href}
+                          className="text-sm text-slate-400 hover:text-gold-200 transition-colors duration-300 font-light"
+                        >
+                          {link.label}
+                        </a>
+                      )}
                     </li>
                   ))}
                 </ul>
