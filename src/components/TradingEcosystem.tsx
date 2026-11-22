@@ -11,13 +11,13 @@ const pillars: Pillar[] = [
     num: '02',
     title: 'Fiscalidad',
     description: 'Planificación y organización fiscal relacionada con la actividad de trading.',
-    comingSoon: true,
+    href: 'https://fiscalidadtrading.rcpvbusiness.com',
   },
   {
     num: '03',
     title: 'Mentalidad',
     description: 'Trabajo sobre disciplina, gestión emocional y toma de decisiones.',
-    comingSoon: true,
+    href: 'https://mentalidadtrading.rcpvbusiness.com',
   },
 ];
 

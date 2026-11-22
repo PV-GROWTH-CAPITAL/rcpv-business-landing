@@ -31,8 +31,8 @@ const columns: { title: string; links: FooterLink[] }[] = [
     title: 'Trading',
     links: [
       { label: 'Bitácora', href: 'https://bitacora.rcpvbusiness.com' },
-      { label: 'Fiscalidad', comingSoon: true },
-      { label: 'Mentalidad', comingSoon: true },
+      { label: 'Fiscalidad', href: 'https://fiscalidadtrading.rcpvbusiness.com' },
+      { label: 'Mentalidad', href: 'https://mentalidadtrading.rcpvbusiness.com' },
     ],
   },
   {
